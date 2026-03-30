@@ -1,0 +1,150 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+}
+
+.admin-topbar {
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+    padding: 12px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.admin-brand {
+    color: #f0f6fc;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.admin-container {
+    display: flex;
+    margin-top: 56px;
+    min-height: calc(100vh - 56px);
+}
+
+.admin-sidebar {
+    width: 220px;
+    background: #161b22;
+    border-right: 1px solid #30363d;
+    padding: 20px 0;
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.tab-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #8b949e;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.tab-btn:hover { color: #c9d1d9; background: rgba(88,166,255,0.05); }
+.tab-btn.active { color: #58a6ff; background: rgba(88,166,255,0.1); border-left-color: #58a6ff; }
+
+.admin-content {
+    margin-left: 220px;
+    flex: 1;
+    padding: 30px 40px;
+}
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.tab-panel h4 { color: #f0f6fc; margin-bottom: 25px; }
+
+.form-label { color: #8b949e; font-size: 0.85rem; }
+
+.form-control {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    background: #0d1117;
+    border-color: #58a6ff;
+    color: #c9d1d9;
+    box-shadow: 0 0 0 2px rgba(88,166,255,0.2);
+}
+
+/* Dynamic cards */
+.admin-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.admin-card .btn-remove {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #f85149;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.admin-card .btn-remove:hover { color: #ff7b72; }
+
+/* Toast */
+.toast-msg {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    background: #238636;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s;
+    z-index: 200;
+    pointer-events: none;
+}
+
+.toast-msg.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast-msg.error {
+    background: #da3633;
+}
+
+@media (max-width: 768px) {
+    .admin-sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+        display: flex;
+        overflow-x: auto;
+        border-right: none;
+        border-bottom: 1px solid #30363d;
+    }
+    .tab-btn { white-space: nowrap; border-left: none; border-bottom: 3px solid transparent; }
+    .tab-btn.active { border-left-color: transparent; border-bottom-color: #58a6ff; }
+    .admin-content { margin-left: 0; padding: 20px; }
+    .admin-container { flex-direction: column; }
+}

@@ -1,0 +1,195 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+    var data = Model.Data;
+}
+
+<!-- Hero -->
+<section id="hero" class="hero-section d-flex align-items-center">
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="container" style="position:relative;z-index:1;">
+        <div class="row align-items-center">
+            <div class="col-lg-7 text-center text-lg-start">
+                <p class="hero-greeting" data-reveal>Hello, I'm</p>
+                <h1 class="hero-name" data-reveal>@data.Profile.Name.ToUpper()</h1>
+                <h2 class="hero-title" data-reveal>@data.Profile.Title</h2>
+                <div class="hero-buttons mt-4" data-reveal>
+                    <a href="#projects" class="btn btn-primary btn-lg me-3">View Projects</a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg me-3">Contact Me</a>
+                    <a href="~/documents/resume.pdf" download class="hero-resume-icon" title="Download Resume">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center mt-5 mt-lg-0">
+                <div class="profile-photo-wrapper" data-tilt>
+                    <img src="@data.Profile.PhotoUrl" alt="@data.Profile.Name" class="profile-photo" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section-padding">
+    <div class="container text-center">
+        <h2 class="section-title" data-reveal>About Me</h2>
+        <p class="lead mx-auto" data-reveal style="max-width:700px;">@data.Profile.AboutMe</p>
+    </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="section-padding section-alt">
+    <div class="container text-center">
+        <h2 class="section-title" data-reveal>Education</h2>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6">
+                <div class="education-card" data-tilt data-reveal>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h5>@data.Education.Degree</h5>
+                    <p class="edu-college">@data.Education.College</p>
+                    <p class="edu-year">@data.Education.Year</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Work Experience -->
+<section id="experience" class="section-padding">
+    <div class="container">
+        <h2 class="section-title d-block text-center" data-reveal>Work Experience</h2>
+        <div class="timeline mt-5">
+            @foreach (var exp in data.Experience)
+            {
+                <div class="timeline-item" data-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" data-tilt>
+                        <span class="timeline-duration"><i class="fa-regular fa-calendar me-1"></i>@exp.Duration</span>
+                        <h5 class="timeline-role">@exp.Role</h5>
+                        <p class="timeline-company"><i class="fa-solid fa-building me-1"></i>@exp.Company</p>
+                        <p class="timeline-desc">@exp.Description</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section-padding">
+    <div class="container text-center">
+        <h2 class="section-title" data-reveal>Skills</h2>
+        <div class="row g-4 mt-4">
+            @foreach (var group in data.Skills)
+            {
+                var colClass = data.Skills.IndexOf(group) < 2 ? "col-md-6" : "col-md-4";
+                <div class="@colClass">
+                    <div class="skill-group" data-tilt data-reveal>
+                        <h5><i class="@group.Icon me-2"></i>@group.Category</h5>
+                        <div class="skill-tags">
+                            @foreach (var skill in group.Skills)
+                            {
+                                <span>@skill</span>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section-padding section-alt">
+    <div class="container text-center">
+        <h2 class="section-title" data-reveal>Projects</h2>
+        <div class="row g-4 mt-3 justify-content-center">
+            @foreach (var project in data.Projects)
+            {
+                var colClass = project.IsFullWidth ? "col-md-12" : "col-md-6";
+                <div class="@colClass">
+                    <div class="project-card text-start" data-tilt data-reveal>
+                        @if (!string.IsNullOrEmpty(project.Badge))
+                        {
+                            <span class="project-badge @project.BadgeClass">@project.Badge</span>
+                        }
+                        <h5>
+                            <i class="@project.Icon me-2"></i>@project.Title
+                            @if (!string.IsNullOrEmpty(project.Company))
+                            {
+                                <span class="project-company">[ @project.Company ]</span>
+                            }
+                        </h5>
+                        <p>@project.Description</p>
+                        @if (project.Technologies.Any())
+                        {
+                            <div class="project-tech">
+                                @foreach (var tech in project.Technologies)
+                                {
+                                    <span>@tech</span>
+                                }
+                            </div>
+                        }
+                        @if (!string.IsNullOrEmpty(project.LinkUrl))
+                        {
+                            <a href="@project.LinkUrl" target="_blank" class="project-link mt-3">
+                                <i class="@project.LinkIcon me-1"></i> @project.LinkText
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section-padding">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <!-- Left Side -->
+            <div class="col-lg-5 text-center text-lg-start">
+                <h2 class="section-title" data-reveal>Let's Connect</h2>
+                <p class="lead" data-reveal>Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+                <div class="contact-socials mt-4" data-reveal>
+                    <a href="@data.Contact.LinkedInUrl" target="_blank" class="social-btn-label">
+                        <i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span>
+                    </a>
+                    <a href="@data.Contact.GitHubUrl" target="_blank" class="social-btn-label">
+                        <i class="fa-brands fa-github"></i><span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Right Side -->
+            <div class="col-lg-7">
+                <div class="contact-grid">
+                    <a href="mailto:@data.Contact.Email" class="contact-tile" data-tilt data-reveal>
+                        <div class="contact-tile-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <span class="contact-tile-label">Email</span>
+                            <span class="contact-tile-value">@data.Contact.Email</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right contact-tile-arrow"></i>
+                    </a>
+                    <a href="tel:+91@data.Contact.Phone.Replace(" ", "")" class="contact-tile" data-tilt data-reveal>
+                        <div class="contact-tile-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <span class="contact-tile-label">Phone</span>
+                            <span class="contact-tile-value">@data.Contact.Phone</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right contact-tile-arrow"></i>
+                    </a>
+                    <div class="contact-tile" data-tilt data-reveal>
+                        <div class="contact-tile-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <span class="contact-tile-label">Location</span>
+                            <span class="contact-tile-value">@data.Contact.Location</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

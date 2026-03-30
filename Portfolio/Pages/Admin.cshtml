@@ -1,0 +1,135 @@
+@page
+@model AdminModel
+@{
+    ViewData["Title"] = "Admin Panel";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - Portfolio</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/admin.css" />
+</head>
+<body>
+    <!-- Top Bar -->
+    <nav class="admin-topbar">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <span class="admin-brand"><i class="fa-solid fa-gear me-2"></i>Admin Panel</span>
+            <div>
+                <a href="/" class="btn btn-sm btn-outline-light me-2" target="_blank">
+                    <i class="fa-solid fa-eye me-1"></i>View Site
+                </a>
+                <button class="btn btn-sm btn-success" id="btnSaveAll" onclick="saveAll()">
+                    <i class="fa-solid fa-floppy-disk me-1"></i>Save All
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <!-- Sidebar Tabs -->
+        <div class="admin-sidebar">
+            <button class="tab-btn active" data-tab="profile"><i class="fa-solid fa-user me-2"></i>Profile</button>
+            <button class="tab-btn" data-tab="education"><i class="fa-solid fa-graduation-cap me-2"></i>Education</button>
+            <button class="tab-btn" data-tab="experience"><i class="fa-solid fa-briefcase me-2"></i>Experience</button>
+            <button class="tab-btn" data-tab="skills"><i class="fa-solid fa-code me-2"></i>Skills</button>
+            <button class="tab-btn" data-tab="projects"><i class="fa-solid fa-diagram-project me-2"></i>Projects</button>
+            <button class="tab-btn" data-tab="contact"><i class="fa-solid fa-address-book me-2"></i>Contact</button>
+        </div>
+
+        <!-- Content -->
+        <div class="admin-content">
+            <!-- Toast -->
+            <div class="toast-msg" id="toast"></div>
+
+            <!-- Profile Tab -->
+            <div class="tab-panel active" id="tab-profile">
+                <h4>Profile</h4>
+                <div class="mb-3">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" id="profileName" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Title</label>
+                    <input type="text" class="form-control" id="profileTitle" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">About Me</label>
+                    <textarea class="form-control" id="profileAbout" rows="4"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Photo URL</label>
+                    <input type="text" class="form-control" id="profilePhoto" />
+                </div>
+            </div>
+
+            <!-- Education Tab -->
+            <div class="tab-panel" id="tab-education">
+                <h4>Education</h4>
+                <div class="mb-3">
+                    <label class="form-label">Degree</label>
+                    <input type="text" class="form-control" id="eduDegree" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">College</label>
+                    <input type="text" class="form-control" id="eduCollege" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Year</label>
+                    <input type="text" class="form-control" id="eduYear" />
+                </div>
+            </div>
+
+            <!-- Experience Tab -->
+            <div class="tab-panel" id="tab-experience">
+                <h4>Work Experience <button class="btn btn-sm btn-outline-primary ms-2" onclick="addExperience()"><i class="fa-solid fa-plus me-1"></i>Add Experience</button></h4>
+                <div id="experienceContainer"></div>
+            </div>
+
+            <!-- Skills Tab -->
+            <div class="tab-panel" id="tab-skills">
+                <h4>Skills <button class="btn btn-sm btn-outline-primary ms-2" onclick="addSkillGroup()"><i class="fa-solid fa-plus me-1"></i>Add Group</button></h4>
+                <div id="skillsContainer"></div>
+            </div>
+
+            <!-- Projects Tab -->
+            <div class="tab-panel" id="tab-projects">
+                <h4>Projects <button class="btn btn-sm btn-outline-primary ms-2" onclick="addProject()"><i class="fa-solid fa-plus me-1"></i>Add Project</button></h4>
+                <div id="projectsContainer"></div>
+            </div>
+
+            <!-- Contact Tab -->
+            <div class="tab-panel" id="tab-contact">
+                <h4>Contact</h4>
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" id="contactEmail" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Phone</label>
+                    <input type="text" class="form-control" id="contactPhone" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Location</label>
+                    <input type="text" class="form-control" id="contactLocation" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">LinkedIn URL</label>
+                    <input type="url" class="form-control" id="contactLinkedIn" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">GitHub URL</label>
+                    <input type="url" class="form-control" id="contactGitHub" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/admin.js"></script>
+</body>
+</html>

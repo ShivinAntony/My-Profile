@@ -1,0 +1,150 @@
+{
+  "Profile": {
+    "Name": "Shivin Antony",
+    "Title": ".NET Developer",
+    "AboutMe": "Passionate .NET Developer with experience building robust web applications using ASP.NET Core, C#, and modern web technologies.",
+    "PhotoUrl": "/images/profile.jpg"
+  },
+  "Education": {
+    "Degree": "BSc Computer Science",
+    "College": "Don Bosco College, Ollukara",
+    "Year": "2018 - 2021"
+  },
+  "Experience": [
+    {
+      "Company": "MACOM Solutions (Manappuram Comptech and Consultants Ltd)",
+      "Role": ".NET Developer",
+      "Duration": "Jul 2024 \u2013 Present",
+      "Description": "Worked as a .NET Developer contributing to the design, development, and maintenance of web-based applications using ASP.NET and C#. Collaborated with cross-functional teams to implement business requirements, optimize application performance, fix bugs, and support existing systems. Assisted in database development using SQL Server and followed coding standards and best practices to ensure reliable and scalable solutions."
+    },
+    {
+      "Company": "Soften Technologies",
+      "Role": "Java Full Stack Intern",
+      "Duration": "Feb 2022 \u2013 Jan 2023",
+      "Description": "Develop and maintain both front-end and back-end components using Java and\nrelevant technologies. Utilize a relational database such as MySQL"
+    }
+  ],
+  "Skills": [
+    {
+      "Category": "Backend",
+      "Icon": "fa-solid fa-server",
+      "Skills": [
+        "C#",
+        ".NET Core",
+        "SQL",
+        "PL/SQL",
+        "Java",
+        "REST API",
+        "Web API",
+        "MVC Architecture"
+      ]
+    },
+    {
+      "Category": "Frontend",
+      "Icon": "fa-solid fa-palette",
+      "Skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Tailwind CSS",
+        "Bootstrap"
+      ]
+    },
+    {
+      "Category": "Databases",
+      "Icon": "fa-solid fa-database",
+      "Skills": [
+        "MySQL",
+        "Oracle",
+        "SQL Server"
+      ]
+    },
+    {
+      "Category": "Frameworks",
+      "Icon": "fa-solid fa-layer-group",
+      "Skills": [
+        "ASP.NET Core",
+        "Entity Framework Core"
+      ]
+    },
+    {
+      "Category": "Tools",
+      "Icon": "fa-solid fa-wrench",
+      "Skills": [
+        "Git",
+        "GitLab",
+        "VS Code",
+        "Postman"
+      ]
+    }
+  ],
+  "Projects": [
+    {
+      "Title": "JUSSUIT - Litigation Management Solution",
+      "Icon": "fa-solid fa-gavel",
+      "Description": "Jus Suit is a full-featured solution to manage the entire litigation process of a company. It helps internal Legal Departments identify actionable loan accounts based on management policy and supports the department to proficiently manage constant litigations.",
+      "Badge": "Currently Working",
+      "BadgeClass": "badge-work",
+      "Company": "MACOM",
+      "Technologies": [
+        "C#",
+        ".NET Core",
+        "ASP.NET Core",
+        "REST API",
+        "MVC",
+        "PL/SQL",
+        "SQL Server",
+        "Entity Framework Core"
+      ],
+      "LinkUrl": "https://gen.mactech.net.in/JusSuit_Asirvad/ASIRVAD/login",
+      "LinkText": "Live Demo",
+      "LinkIcon": "fa-solid fa-arrow-up-right-from-square",
+      "IsFullWidth": true
+    },
+    {
+      "Title": "Palliative Care App \u0026 Web",
+      "Icon": "fa-solid fa-heart-pulse",
+      "Description": "A web and mobile application to manage palliative care operations including patient allocation, medical reports, campaign details, sponsor approval, and trainee management. The goal is to improve quality of life for both the patient and the family.",
+      "Badge": "College Project",
+      "BadgeClass": null,
+      "Company": null,
+      "Technologies": [
+        "PHP",
+        "Android Studio",
+        "SQLyog"
+      ],
+      "LinkUrl": null,
+      "LinkText": null,
+      "LinkIcon": null,
+      "IsFullWidth": false
+    },
+    {
+      "Title": "Shopping Cart",
+      "Icon": "fa-solid fa-cart-shopping",
+      "Description": "A shopping cart web app that facilitates effortless online shopping. Users can browse products, add items to their cart, and securely complete transactions. Efficiently manages product catalog, user accounts, and order processing.",
+      "Badge": null,
+      "BadgeClass": null,
+      "Company": null,
+      "Technologies": [
+        "JavaScript",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "LinkUrl": "https://github.com/ShivinAntony/shopping-cart-node1",
+      "LinkText": "View on GitHub",
+      "LinkIcon": "fa-brands fa-github",
+      "IsFullWidth": false
+    }
+  ],
+  "Contact": {
+    "Email": "shivinantony087@gmail.com",
+    "Phone": "80781 08280",
+    "Location": "Thrissur, Kerala, India",
+    "LinkedInUrl": "https://www.linkedin.com/in/shivin-antony-b1618921-9/",
+    "GitHubUrl": "https://github.com/ShivinAntony"
+  }
+}
