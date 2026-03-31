@@ -29,3 +29,35 @@ D:\Porfolio\Portfolio\Portfolio\obj\Debug\net8.0\Portfolio.pdb
 D:\Porfolio\Portfolio\Portfolio\obj\Debug\net8.0\Portfolio.genruntimeconfig.cache
 D:\Porfolio\Portfolio\Portfolio\obj\Debug\net8.0\ref\Portfolio.dll
 D:\Porfolio\Portfolio\Portfolio\bin\Debug\net8.0\App_Data\portfolio.json
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\bin\Debug\net8.0\appsettings.Development.json
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\bin\Debug\net8.0\appsettings.json
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\bin\Debug\net8.0\App_Data\portfolio.json
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\bin\Debug\net8.0\Portfolio.staticwebassets.runtime.json
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\bin\Debug\net8.0\Portfolio.exe
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\bin\Debug\net8.0\Portfolio.deps.json
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\bin\Debug\net8.0\Portfolio.runtimeconfig.json
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\bin\Debug\net8.0\Portfolio.dll
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\bin\Debug\net8.0\Portfolio.pdb
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\Portfolio.GeneratedMSBuildEditorConfig.editorconfig
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\Portfolio.AssemblyInfoInputs.cache
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\Portfolio.AssemblyInfo.cs
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\Portfolio.csproj.CoreCompileInputs.cache
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\Portfolio.MvcApplicationPartsAssemblyInfo.cache
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\Portfolio.RazorAssemblyInfo.cache
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\Portfolio.RazorAssemblyInfo.cs
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\Portfolio.sourcelink.json
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\staticwebassets.build.json
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\staticwebassets.development.json
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\staticwebassets\msbuild.Portfolio.Microsoft.AspNetCore.StaticWebAssets.props
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\staticwebassets\msbuild.build.Portfolio.props
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Portfolio.props
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Portfolio.props
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\staticwebassets.pack.json
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\scopedcss\bundle\Portfolio.styles.css
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\scopedcss\projectbundle\Portfolio.bundle.scp.css
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\Portfolio.dll
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\refint\Portfolio.dll
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\Portfolio.pdb
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\Portfolio.genruntimeconfig.cache
+D:\RELEASE 2026\MAR\My-Profile\Portfolio\obj\Debug\net8.0\ref\Portfolio.dll
